@@ -1,3 +1,9 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.agile {
+  left: 150px;
+  top: 100px;
+  @apply absolute;
+}

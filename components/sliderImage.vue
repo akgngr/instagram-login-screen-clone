@@ -37,9 +37,4 @@ export default {}
 .slider-image {
   @apply relative;
 }
-.agile {
-  left: 150px;
-  top: 100px;
-  @apply absolute;
-}
 </style>

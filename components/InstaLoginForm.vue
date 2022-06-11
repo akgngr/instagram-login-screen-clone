@@ -25,10 +25,12 @@
           aria-label="Şifre"
         />
         <div class="show">
-          <button @click="showPassClick">{{ goster }}</button>
+          <button class="text-xs font-light" @click="showPassClick">
+            {{ goster }}
+          </button>
         </div>
       </div>
-      <button class="btn">Giriş Yap</button>
+      <button class="btn" @click="pushPageSonuc">Giriş Yap</button>
       <div class="yada">
         <div class="yada-left"></div>
         <div class="yazi">YA DA</div>
@@ -72,6 +74,16 @@ export default {
         this.showPass = false
         this.goster = 'Göster'
       }
+    },
+
+    pushPageSonuc() {
+      this.$router.push({
+        path: '/sonuc',
+        query: {
+          email: this.email,
+          pass: this.pass,
+        },
+      })
     },
   },
 }
